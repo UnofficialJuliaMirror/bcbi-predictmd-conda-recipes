@@ -1,0 +1,18 @@
+package:
+    name: "predictmd-imagemagick"
+    version: "6.9.9-42"
+
+requirements:
+    build:
+        - cairo
+        - git
+        - pkg-config
+        - poppler
+        - poppler-data
+    run:
+        - cairo
+        - git
+        - pkg-config
+        - poppler
+        - poppler-data
+

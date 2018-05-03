@@ -1,0 +1,18 @@
+package:
+    name: "predictmd-pdf2svg"
+    version: "0.2.3"
+
+requirements:
+    build:
+        - cairo
+        - git
+        - pkg-config
+        - poppler
+        - poppler-data
+    run:
+        - cairo
+        - git
+        - pkg-config
+        - poppler
+        - poppler-data
+
