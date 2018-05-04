@@ -1,6 +1,6 @@
 package:
     name: "predictmd-texlive"
-    version: "2017-20170524"
+    version: "20170524"
 
 requirements:
     build:
