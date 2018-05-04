@@ -1,7 +1,7 @@
 set -o verbose
 set -o errexit
 
-#wget --output-document=install-tl-unx.tar.gz ftp://tug.org/historic/systems/texlive/2017/install-tl-unx.tar.gz
+#wget --output-document=install-tl-unx.tar.gz http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/install-tl-unx.tar.gz
 cp $RECIPE_DIR/downloads/install-tl-unx.tar.gz .
 tar -vzxf install-tl-unx.tar.gz
 rm -f install-tl-unx.tar.gz
@@ -37,11 +37,11 @@ printf "tlpdbopt_sys_man $PREFIX/man\n" >> predictmd-texlive.profile
 printf "tlpdbopt_w32_multi_user 1\n" >> predictmd-texlive.profile
 
 cd install-tl
-./install-tl --profile=../predictmd-texlive.profile -repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
+./install-tl --profile=../predictmd-texlive.profile -repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/tlnet-final/
 cd ..
 rm -rf install-tl
 
-tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
+tlmgr option repository http://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2017/tlnet-final/
 tlmgr update --self
 tlmgr update --all
 tlmgr install lm luatex85 pgfplots standalone
