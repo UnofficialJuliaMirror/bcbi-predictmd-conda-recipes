@@ -49,7 +49,7 @@ To install ```predictmd-imagemagick``` and ```predictmd-pdf2svg```, you would ru
 conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg
 ```
 
-**Step 5 (cleaning up**:
+**Step 5**: Now that you have installed the recipes, run some clean-up commands to recover disk space:
 ```bash
 cd ..
 rm -rf conda-recipes-master
