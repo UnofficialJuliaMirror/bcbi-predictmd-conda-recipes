@@ -2,7 +2,7 @@ set -o verbose
 set -o errexit
 
 #wget --output-document=install-tl-unx.tar.gz ftp://tug.org/historic/systems/texlive/2017/install-tl-unx.tar.gz
-cp $RECIPE_DIR/dependencies/install-tl-unx.tar.gz .
+cp $RECIPE_DIR/downloads/install-tl-unx.tar.gz .
 tar -vzxf install-tl-unx.tar.gz
 rm -f install-tl-unx.tar.gz
 mv install-tl-* install-tl
