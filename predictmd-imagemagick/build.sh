@@ -13,5 +13,3 @@ make -j8
 make install
 cd ..
 rm -rf ImageMagick
-
-#export MAGICK_HOME=$PREFIX
