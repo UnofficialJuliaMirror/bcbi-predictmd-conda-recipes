@@ -6,7 +6,8 @@ This repository contains [Conda](https://conda.io/docs/) recipes for building va
 
 **Step 1:** Update ```conda``` and ```conda-build```:
 ```bash
-conda update -y conda conda-build
+conda update -y conda
+conda update -y conda-build
 ```
 
 **Step 2:** Download the recipes:
