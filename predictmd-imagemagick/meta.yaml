@@ -1,6 +1,6 @@
 package:
     name: "predictmd-imagemagick"
-    version: "6.9.9-42"
+    version: "6.9.9_42"
 
 requirements:
     build:
