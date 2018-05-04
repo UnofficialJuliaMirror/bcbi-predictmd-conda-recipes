@@ -53,5 +53,5 @@ conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg
 ```bash
 cd ..
 rm -rf conda-recipes-master
-conda clean --all
+conda clean -y --all
 ```
