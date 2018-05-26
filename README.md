@@ -20,12 +20,12 @@ cd predictmd-conda-recipes-master
 ```
 **Step 3:** Build all of the recipes:
 ```bash
-conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+conda build predictmd-pdf2svg predictmd-texlive
 ```
 
 **Step 4:** Once you have built the recipes, install them:
 ```
-conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+conda install -y --use-local predictmd-pdf2svg predictmd-texlive
 ```
 
 **Step 5:** Finally, run some clean-up commands to recover disk space:
@@ -48,6 +48,8 @@ docker run --name build_predictmd_dependencies_conda -it mhowison/conda-build:v2
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
+sudo ln -s /lib64/libuuid.so.1 /lib64/libuuid.so
+
 conda update -y conda
 conda update -y conda-build
 
@@ -57,9 +59,9 @@ unzip predictmd-conda-recipes-master.zip
 rm predictmd-conda-recipes-master.zip
 cd predictmd-conda-recipes-master
 
-conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+conda build predictmd-pdf2svg predictmd-texlive
 
-conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+conda install -y --use-local predictmd-pdf2svg predictmd-texlive
 ```
 
 **Step 4:** To return to the container at a later time, run the following command in bash:
