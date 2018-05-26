@@ -9,7 +9,7 @@ rm -rf ImageMagick.tar.gz
 mv ImageMagick-* ImageMagick
 cd ImageMagick
 ./configure X_PRE_LIBS="-luuid"
-make -j8
-make -j8 install
+make
+make install
 cd ..
 rm -rf ImageMagick
