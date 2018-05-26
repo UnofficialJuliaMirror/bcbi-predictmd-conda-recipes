@@ -10,6 +10,6 @@ mv ImageMagick-* ImageMagick
 cd ImageMagick
 ./configure --prefix=$PREFIX
 make -j8
-make install
+make -j8 install
 cd ..
 rm -rf ImageMagick
