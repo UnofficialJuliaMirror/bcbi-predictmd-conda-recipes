@@ -43,12 +43,13 @@ conda clean -y --all
 
 **Step 2:** Open bash and run the following command.
 ```bash
-docker run --name build_predictmd_dependencies_conda -it mhowison/conda-build:v2
+docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 ```
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
-sudo ln -s /lib64/libuuid.so.1 /lib64/libuuid.so
+cd ~
+ld -luuid || sudo ln -s /lib64/libuuid.so.1 /lib64/libuuid.so # fix missing symlink
 
 conda update -y conda
 conda update -y conda-build
@@ -66,10 +67,10 @@ conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-t
 
 **Step 4:** To return to the container at a later time, run the following command in bash:
 ```bash
-docker start -a -i build_predictmd_dependencies_conda
+docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 ```
 
 **Step 5:** When you are ready to delete the container, run the following command in bash:
 ```bash
-docker container rm build_predictmd_dependencies_conda
+docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
