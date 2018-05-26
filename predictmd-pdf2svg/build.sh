@@ -10,6 +10,6 @@ mv pdf2svg-* pdf2svg
 cd pdf2svg
 ./configure --prefix=$PREFIX
 make -j8
-make install
+make -j8 install
 cd ..
 rm -rf pdf2svg
