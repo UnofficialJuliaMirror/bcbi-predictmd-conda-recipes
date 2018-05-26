@@ -9,7 +9,7 @@ rm -f pdf2svg.tar.gz
 mv pdf2svg-* pdf2svg
 cd pdf2svg
 ./configure --prefix=$PREFIX
-make -j8
-make -j8 install
+make
+make install
 cd ..
 rm -rf pdf2svg
