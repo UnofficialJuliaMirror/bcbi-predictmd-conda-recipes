@@ -1,6 +1,6 @@
-# conda-recipes
+# predictmd-conda-recipes
 
-This repository contains [Conda](https://conda.io/docs/) recipes for building various binary dependencies.
+This repository contains Conda recipes for building the binary dependencies of [PredictMD.jl](https://github.com/bcbi/PredictMD.jl).
 
 ## Usage
 
@@ -12,48 +12,62 @@ conda update -y conda-build
 
 **Step 2:** Download the recipes:
 ```bash
-wget --output-document=conda-recipes-master.zip https://github.com/DilumAluthge/conda-recipes/archive/master.zip
-unzip conda-recipes-master.zip
-rm conda-recipes-master.zip
-cd conda-recipes-master
+cd ~
+wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
+unzip predictmd-conda-recipes-master.zip
+rm predictmd-conda-recipes-master.zip
+cd predictmd-conda-recipes-master
 ```
-**Step 3:** Build the recipes that you want to build. You can build multiple recipes at once. The syntax is:
+**Step 3:** Build all of the recipes:
 ```bash
-conda build RECIPE-1 [RECIPE-2 RECIPE-3 ...]
+conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-(You should run this command from inside the ```conda-recipes-master``` directory.)
-
-For example, to build ```predictmd-imagemagick```, you would run:
-```bash
-conda build predictmd-imagemagick
+**Step 4:** Once you have built the recipes, install them:
+```
+conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-To build ```predictmd-imagemagick``` and ```predictmd-pdf2svg```, you would run:
-```bash
-conda build predictmd-imagemagick predictmd-pdf2svg
-```
-
-**Step 4:** Once you have built all of the recipes that you want, you can install them. The syntax is:
-```
-conda install -y --use-local RECIPE-1 [RECIPE-2 RECIPE-3 ...]
-```
-
-For example, to install ```predictmd-imagemagick```, you would run:
-```bash
-conda install -y --use-local predictmd-imagemagick
-```
-
-To install ```predictmd-imagemagick``` and ```predictmd-pdf2svg```, you would run:
-```bash
-conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg
-```
-
-**Step 5**: Now that you have installed the recipes, run some clean-up commands to recover disk space:
+**Step 5:** Finally, run some clean-up commands to recover disk space:
 ```bash
 cd ..
-rm -rf conda-recipes-master
+rm -rf predictmd-conda-recipes-master
 conda build purge
 conda build purge-all
 conda clean -y --all
+```
+
+## Docker example
+
+**Step 1:** Make sure that the Docker daemon is running.
+
+**Step 2:** Open bash and run the following command.
+```bash
+docker run --name build_predictmd_dependencies_conda -it mhowison/conda-build:v2
+```
+
+**Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
+```bash
+conda update -y conda
+conda update -y conda-build
+
+cd ~
+wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
+unzip predictmd-conda-recipes-master.zip
+rm predictmd-conda-recipes-master.zip
+cd predictmd-conda-recipes-master
+
+conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+
+conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+```
+
+**Step 4:** To return to the container at a later time, run the following command in bash:
+```bash
+docker start -a -i build_predictmd_dependencies_conda
+```
+
+**Step 5:** When you are ready to delete the container, run the following command in bash:
+```bash
+docker container rm build_predictmd_dependencies_conda
 ```
