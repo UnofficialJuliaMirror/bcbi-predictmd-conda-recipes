@@ -28,7 +28,7 @@ conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-**Step 5**: Finally, run some clean-up commands to recover disk space:
+**Step 5:** Finally, run some clean-up commands to recover disk space:
 ```bash
 cd ..
 rm -rf predictmd-conda-recipes-master
@@ -38,3 +38,36 @@ conda clean -y --all
 ```
 
 ## Docker example
+
+**Step 1:** Make sure that the Docker daemon is running.
+
+**Step 2:** Open bash and run the following command.
+```bash
+docker run --name build_predictmd_dependencies_conda -it mhowison/conda-build:v2
+```
+
+**Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
+```bash
+conda update -y conda
+conda update -y conda-build
+
+cd ~
+wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
+unzip predictmd-conda-recipes-master.zip
+rm predictmd-conda-recipes-master.zip
+cd predictmd-conda-recipes-master
+
+conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+
+conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
+```
+
+**Step 4:** To return to the container at a later time, run the following command in bash:
+```bash
+docker start -a -i build_predictmd_dependencies_conda
+```
+
+**Step 5:** When you are ready to delete the container, run the following command in bash:
+```bash
+docker container rm build_predictmd_dependencies_conda
+```
