@@ -2,22 +2,10 @@
 
 This repository contains Conda recipes for building the binary dependencies of [PredictMD.jl](https://github.com/bcbi/PredictMD.jl).
 
-## Usage
+These recipes are intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
-**Step 1:** Update ```conda``` and ```conda-build```:
-```bash
-conda update -y conda
-conda update -y conda-build
-```
+## DELETEMEUsage
 
-**Step 2:** Download the recipes:
-```bash
-cd ~
-wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
-unzip predictmd-conda-recipes-master.zip
-rm predictmd-conda-recipes-master.zip
-cd predictmd-conda-recipes-master
-```
 **Step 3:** Build all of the recipes:
 ```bash
 conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
@@ -37,7 +25,7 @@ conda build purge-all
 conda clean -y --all
 ```
 
-## Docker example
+## RENAMEME Docker example
 
 **Step 1:** Make sure that the Docker daemon is running.
 
