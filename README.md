@@ -48,9 +48,6 @@ docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
-cd ~
-ld -luuid || sudo ln -s /lib64/libuuid.so.1 /lib64/libuuid.so # fix missing symlink
-
 conda update -y conda
 conda update -y conda-build
 
