@@ -25,7 +25,6 @@
             <th>version</th>
             <th>last updated</th>
             <th>platforms</th>
-            <th>install</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +34,6 @@
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/version.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/latest_release_date.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/platforms.svg"></a></td>
-            <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/installer/conda.svg"></a></td>
         </tr>
         <tr>
             <td>pdf2svg</td>
@@ -43,7 +41,6 @@
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/version.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/latest_release_date.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/platforms.svg"></a></td>
-            <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/installer/conda.svg"></a></td>
         </tr>
         <tr>
             <td>TeX Live</td>
@@ -51,7 +48,6 @@
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/version.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/latest_release_date.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/platforms.svg"></a></td>
-            <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/installer/conda.svg"></a></td>
         </tr>
     </tbody>
 </table>
