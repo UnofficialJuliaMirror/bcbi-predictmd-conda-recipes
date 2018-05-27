@@ -49,17 +49,14 @@ conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-**Step 7:** You can exit the Docker container at any time by running:
-```bash
-exit
-```
+**Step 7:** You can exit the Docker container at any time by typing `exit` and pressing enter.
 
 **Step 8:** To return to the container at a later time, run the following command in bash:
 ```bash
 docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 ```
 
-**Step 9:** When you are ready to delete the container, run the following command in bash:
+**Step 9:** When you are ready to delete the container, first make sure that you have exited the container. Then, run the following command in bash:
 ```bash
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
