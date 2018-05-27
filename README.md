@@ -46,7 +46,7 @@
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/installer/conda.svg"></a></td>
         </tr>
         <tr>
-            <td>Tex Live</td>
+            <td>TeX Live</td>
             <td>predictmd-texlive</td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/version.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/latest_release_date.svg"></a></td>
