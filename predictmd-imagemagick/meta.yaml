@@ -16,3 +16,16 @@ requirements:
         - poppler
         - poppler-data
 
+test:
+    commands:
+        - convert -version
+        - conda inspect linkages -p $PREFIX $PKG_NAME # [not win]
+        - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
+
+about:
+    home: http://www.imagemagick.org/
+    summary: 'Software suite to create, edit, compose, or convert bitmap images.'
+
+extra:
+    recipe-maintainers:
+        - DilumAluthge
