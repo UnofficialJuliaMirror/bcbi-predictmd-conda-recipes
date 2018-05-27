@@ -15,3 +15,28 @@ requirements:
         - pkg-config
         - poppler
         - poppler-data
+
+test:
+    commands:
+        - command -v pdftex
+        - pdftex --version
+        - command -v bibtex
+        - bibtex --version
+        - command -v pdflatex
+        - pdflatex --version
+        - command -v latex
+        - latex --version
+        - command -v luatex
+        - luatex --version
+        - command -v lualatex
+        - lualatex --version
+        - conda inspect linkages -p $PREFIX $PKG_NAME # [not win]
+        - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
+
+about:
+    home: https://www.tug.org/texlive/
+    summary: 'An easy way to get up and running with the TeX document production system.'
+
+extra:
+    recipe-maintainers:
+        - DilumAluthge
