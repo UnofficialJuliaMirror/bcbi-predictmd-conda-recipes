@@ -34,8 +34,7 @@ test:
         - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
 
 about:
-    home: https://www.tug.org/texlive/
-    summary: 'An easy way to get up and running with the TeX document production system.'
+    home: https://github.com/DilumAluthge/predictmd-conda-recipes/tree/master/predictmd-texlive
 
 extra:
     recipe-maintainers:
