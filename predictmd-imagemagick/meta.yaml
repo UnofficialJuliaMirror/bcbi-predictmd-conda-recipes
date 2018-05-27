@@ -24,7 +24,7 @@ test:
         - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
 
 about:
-    home: https://github.com/DilumAluthge/predictmd-conda-recipes/tree/master/predictmd-imagemagick
+    home: https://github.com/DilumAluthge/predictmd-conda-recipes
 
 extra:
     recipe-maintainers:
