@@ -24,8 +24,7 @@ test:
         - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
 
 about:
-    home: http://www.imagemagick.org/
-    summary: 'Software suite to create, edit, compose, or convert bitmap images.'
+    home: https://github.com/DilumAluthge/predictmd-conda-recipes/tree/master/predictmd-imagemagick
 
 extra:
     recipe-maintainers:
