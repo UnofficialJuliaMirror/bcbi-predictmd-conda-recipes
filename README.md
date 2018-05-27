@@ -25,12 +25,16 @@ rm predictmd-conda-recipes-master.zip
 cd predictmd-conda-recipes-master
 ```
 
-**Step 4 (optional, but recommended):** You can tell conda-build to automatically upload successful builds to the Anaconda.org cloud. I recommend this. First, make sure that you have created a free Anaconda.org account. Second, run the following command and enter your Anaconda.org username and password when prompted:
+**Step 4 (optional, but recommended):** You can tell conda-build to automatically upload successful builds to the Anaconda.org cloud by doing the following:
+
+* First, make sure that you have created a free Anaconda.org account.
+
+* Second, run the following command and enter your Anaconda.org username and password when prompted:
 ```bash
 anaconda login
 ```
 
-Third, run the following command, which tells conda-build to automatically upload after a successful build.
+* Third, run the following command, which tells conda-build to automatically upload after a successful build:
 ```bash
 conda config --set anaconda_upload yes
 ```
