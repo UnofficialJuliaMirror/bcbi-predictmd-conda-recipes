@@ -10,7 +10,7 @@
     <tbody>
         <tr>
             <td>master</td>
-            <td><a href="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes.jl.svg?branch=master"></a></td>
+            <td><a href="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes.svg?branch=master"></a></td>
         </tr>
     </tbody>
 </table>
@@ -46,7 +46,7 @@
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/installer/conda.svg"></a></td>
         </tr>
         <tr>
-            <td>Tex Live 2017</td>
+            <td>Tex Live</td>
             <td>predictmd-texlive</td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/version.svg"></a></td>
             <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/latest_release_date.svg"></a></td>
@@ -56,7 +56,7 @@
     </tbody>
 </table>
 
-This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://github.com/bcbi/PredictMD.jl).
+This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
