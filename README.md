@@ -1,5 +1,20 @@
 # predictmd-conda-recipes
 
+<table>
+    <thead>
+        <tr>
+            <th>branch</th>
+            <th>travis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>master</td>
+            <td><a href="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis Build Status (master)" title="Travis Build Status (master)" src="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes.jl.svg?branch=master"></a></td>
+        </tr>
+    </tbody>
+</table>
+
 This repository contains Conda recipes for building the binary dependencies of [PredictMD.jl](https://github.com/bcbi/PredictMD.jl).
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
