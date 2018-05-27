@@ -23,8 +23,7 @@ test:
         - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
 
 about:
-    home: http://www.cityinthesky.co.uk/opensource/pdf2svg/
-    summary: 'A simple PDF to SVG converter using the Poppler and Cairo libraries'
+    home: https://github.com/DilumAluthge/predictmd-conda-recipes/tree/master/predictmd-pdf2svg
 
 extra:
     recipe-maintainers:
