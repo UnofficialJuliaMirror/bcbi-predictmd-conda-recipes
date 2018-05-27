@@ -16,3 +16,16 @@ requirements:
         - poppler
         - poppler-data
 
+test:
+    commands:
+        - command -v pdf2svg
+        - conda inspect linkages -p $PREFIX $PKG_NAME # [not win]
+        - conda inspect objects -p $PREFIX $PKG_NAME # [osx]
+
+about:
+    home: http://www.cityinthesky.co.uk/opensource/pdf2svg/
+    summary: 'A simple PDF to SVG converter using the Poppler and Cairo libraries'
+
+extra:
+    recipe-maintainers:
+        - DilumAluthge
