@@ -10,12 +10,53 @@
     <tbody>
         <tr>
             <td>master</td>
-            <td><a href="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis Build Status (master)" title="Travis Build Status (master)" src="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes.jl.svg?branch=master"></a></td>
+            <td><a href="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.org/DilumAluthge/predictmd-conda-recipes.jl.svg?branch=master"></a></td>
         </tr>
     </tbody>
 </table>
 
-This repository contains Conda recipes for building the binary dependencies of [PredictMD.jl](https://github.com/bcbi/PredictMD.jl).
+
+
+<table>
+    <thead>
+        <tr>
+            <th>dependency</th>
+            <th>recipe name</th>
+            <th>version</th>
+            <th>last updated</th>
+            <th>platforms</th>
+            <th>install</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>ImageMagick</td>
+            <td>predictmd-imagemagick</td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/version.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/latest_release_date.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/platforms.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-imagemagick"><img src="https://anaconda.org/dilumaluthge/predictmd-imagemagick/badges/installer/conda.svg"></a></td>
+        </tr>
+        <tr>
+            <td>pdf2svg</td>
+            <td>predictmd-pdf2svg</td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/version.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/latest_release_date.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/platforms.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-pdf2svg"><img src="https://anaconda.org/dilumaluthge/predictmd-pdf2svg/badges/installer/conda.svg"></a></td>
+        </tr>
+        <tr>
+            <td>Tex Live 2017</td>
+            <td>predictmd-texlive</td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/version.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/latest_release_date.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/platforms.svg"></a></td>
+            <td><a href="https://anaconda.org/dilumaluthge/predictmd-texlive"><img src="https://anaconda.org/dilumaluthge/predictmd-texlive/badges/installer/conda.svg"></a></td>
+        </tr>
+    </tbody>
+</table>
+
+This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://github.com/bcbi/PredictMD.jl).
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
