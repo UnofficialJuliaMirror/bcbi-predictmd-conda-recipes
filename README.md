@@ -117,20 +117,26 @@ export MAGICK_HOME=$CONDA_PREFIX/lib
 ~/julia/bin/julia -e 'Pkg.update()'
 ```
 
-**Step 9:** Test PredictMD.
+**Step 9:** Make sure that you can `import` PredictMD without any errors.
 ```bash
 ~/julia/bin/julia -e 'import PredictMD'
+```
+
+**Step 10:** Run the PredictMD test suite.
+```bash
 ~/julia/bin/julia -e 'Pkg.test("PredictMD")'
 ```
 
-**Step 10:** You can exit the Docker container at any time by typing `exit` and pressing enter.
+If you see the message like "INFO: PredictMD tests passed", then everything is working correctly!
 
-**Step 11:** To return to the container at a later time, run the following command in bash:
+**Step 11:** You can exit the Docker container at any time by typing `exit` and pressing enter.
+
+**Step 12:** To return to the container at a later time, run the following command in bash:
 ```bash
 docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 ```
 
-**Step 12:** When you are ready to delete the container, first make sure that you have exited the container. Then, run the following command in bash:
+**Step 13:** When you are ready to delete the container, first make sure that you have exited the container. Then, run the following command in bash:
 ```bash
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
