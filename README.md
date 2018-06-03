@@ -127,7 +127,7 @@ export MAGICK_HOME=$CONDA_PREFIX/lib
 ~/julia/bin/julia -e 'Pkg.test("PredictMD")'
 ```
 
-If you see the message like "INFO: PredictMD tests passed", then everything is working correctly!
+If you see the message "INFO: PredictMD tests passed", then everything is working correctly!
 
 **Step 11:** You can exit the Docker container at any time by typing `exit` and pressing enter.
 
