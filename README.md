@@ -97,14 +97,46 @@ conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-**Step 7:** You can exit the Docker container at any time by typing `exit` and pressing enter.
+**Step 7:** Download and install Julia. You want the **64-bit version** of the **Generic Linux Binaries for x86**, available here: [https://julialang.org/downloads/](https://julialang.org/downloads/)
+```bash
+cd ~
+wget --output-document=julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.3-linux-x86_64.tar.gz
+tar xzf julia.tar.gz
+rm -rf julia.tar.gz
+mv julia-* julia
+```
 
-**Step 8:** To return to the container at a later time, run the following command in bash:
+**Step 8:** Install PredictMD.
+```bash
+cd ~
+export CONDA_PREFIX=`conda info --base || conda info --root`
+export MAGICK_HOME=$CONDA_PREFIX/lib
+~/julia/bin/julia -e 'Pkg.init()'
+~/julia/bin/julia -e 'Pkg.update()'
+~/julia/bin/julia -e 'Pkg.clone("https://github.com/bcbi/PredictMD.jl")'
+~/julia/bin/julia -e 'Pkg.update()'
+```
+
+**Step 9:** Make sure that you can `import` PredictMD without any errors.
+```bash
+~/julia/bin/julia -e 'import PredictMD'
+```
+
+**Step 10:** Run the PredictMD test suite.
+```bash
+~/julia/bin/julia -e 'Pkg.test("PredictMD")'
+```
+
+If you see the message "INFO: PredictMD tests passed", then everything is working correctly!
+
+**Step 11:** You can exit the Docker container at any time by typing `exit` and pressing enter.
+
+**Step 12:** To return to the container at a later time, run the following command in bash:
 ```bash
 docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 ```
 
-**Step 9:** When you are ready to delete the container, first make sure that you have exited the container. Then, run the following command in bash:
+**Step 13:** When you are ready to delete the container, first make sure that you have exited the container. Then, run the following command in bash:
 ```bash
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
