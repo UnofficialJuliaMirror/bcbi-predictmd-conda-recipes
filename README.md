@@ -97,7 +97,7 @@ conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive
 ```
 
-**Step 7:** Download and install Julia. You want the 64-bit version of the "Generic Linux Binaries for x86", available here; [https://julialang.org/downloads/](https://julialang.org/downloads/).
+**Step 7:** Download and install Julia. You want the **64-bit version** of the **Generic Linux Binaries for x86**, available here: [https://julialang.org/downloads/](https://julialang.org/downloads/)
 ```bash
 cd ~
 wget --output-document=julia.tar.gz https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.3-linux-x86_64.tar.gz
@@ -114,6 +114,7 @@ export MAGICK_HOME=$CONDA_PREFIX/lib
 ~/julia/bin/julia -e 'Pkg.init()'
 ~/julia/bin/julia -e 'Pkg.update()'
 ~/julia/bin/julia -e 'Pkg.clone("https://github.com/bcbi/PredictMD.jl")'
+~/julia/bin/julia -e 'Pkg.update()'
 ```
 
 **Step 9:** Test PredictMD.
