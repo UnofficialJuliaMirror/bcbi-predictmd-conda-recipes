@@ -15,8 +15,6 @@
     </tbody>
 </table>
 
-
-
 <table>
     <thead>
         <tr>
@@ -51,6 +49,8 @@
 This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
+
+Issues for this project should be submitted to the PredictMD issue tracker: [https://github.com/bcbi/PredictMD.jl/issues](https://github.com/bcbi/PredictMD.jl/issues)
 
 ## Usage
 
