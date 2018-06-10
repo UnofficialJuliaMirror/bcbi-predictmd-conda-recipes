@@ -117,17 +117,21 @@ export MAGICK_HOME=$CONDA_PREFIX/lib
 ~/julia/bin/julia -e 'Pkg.update()'
 ```
 
-**Step 9:** Make sure that you can `import` PredictMD without any errors.
+**Step 9:** Test the `master` (stable) version of PredictMD:
 ```bash
-~/julia/bin/julia -e 'import PredictMD'
+export PREDICTMD_FORCE_TEST_PLOTS=true
+~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "master"); Pkg.test("PredictMD");'
 ```
 
-**Step 10:** Run the PredictMD test suite.
+If you see the message "INFO: PredictMD tests passed", then the tests have passed on the `master` branch. If you see a different message, then the tests did not pass.
+
+**Step 10:** Test the `develop` (latest) version of PredictMD:
 ```bash
-~/julia/bin/julia -e 'Pkg.test("PredictMD")'
+export PREDICTMD_FORCE_TEST_PLOTS=true
+~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "develop"); Pkg.test("PredictMD");'
 ```
 
-If you see the message "INFO: PredictMD tests passed", then everything is working correctly!
+If you see the message "INFO: PredictMD tests passed", then the tests have passed on the `develop` branch. If you see a different message, then the tests did not pass.
 
 **Step 11:** You can exit the Docker container at any time by typing `exit` and pressing enter.
 
