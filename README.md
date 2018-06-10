@@ -117,7 +117,7 @@ export MAGICK_HOME=$CONDA_PREFIX/lib
 ~/julia/bin/julia -e 'Pkg.update()'
 ```
 
-**Step 9:** Test the `master` (stable release) version of PredictMD:
+**Step 9:** Test the `master` (stable) version of PredictMD:
 ```bash
 export PREDICTMD_FORCE_TEST_PLOTS=true
 ~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "master"); Pkg.test("PredictMD");'
@@ -125,7 +125,7 @@ export PREDICTMD_FORCE_TEST_PLOTS=true
 
 If you see the message "INFO: PredictMD tests passed", then the tests have passed on the `master` branch. If you see a different message, then the tests did not pass.
 
-**Step 10:** Test the `develop` (latest, unstable) version of PredictMD:
+**Step 10:** Test the `develop` (latest) version of PredictMD:
 ```bash
 export PREDICTMD_FORCE_TEST_PLOTS=true
 ~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "develop"); Pkg.test("PredictMD");'
