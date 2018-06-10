@@ -1,20 +1,70 @@
 # predictmd-conda-recipes
 
+This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
+
+These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
+
+### Table of Contents
+- [CI/CD](#CI/CD)
+- [Recipes](#Recipes)
+- [Usage](#Usage)
+
+## CI/CD
+
 <table>
     <thead>
         <tr>
-            <th>branch</th>
-            <th>travis</th>
+            <th></th>
+            <th>master</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>master</td>
+            <td>Travis CI</td>
             <td><a href="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes.svg?branch=master"></a></td>
         </tr>
     </tbody>
 </table>
 
+## Recipes
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+    
+
+------------------------------------------------
 <table>
     <thead>
         <tr>
@@ -45,12 +95,6 @@
         </tr>
     </tbody>
 </table>
-
-This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
-
-These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
-
-Issues for this project should be submitted to the PredictMD issue tracker: [https://github.com/bcbi/PredictMD.jl/issues](https://github.com/bcbi/PredictMD.jl/issues)
 
 ## Usage
 
@@ -144,3 +188,4 @@ docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 ```bash
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
+
