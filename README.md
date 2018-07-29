@@ -1,5 +1,7 @@
 # predictmd-conda-recipes
 
+<a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." /></a>
+
 This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
