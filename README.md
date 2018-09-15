@@ -74,6 +74,7 @@ docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
+conda install -fy setuptools
 conda update -y conda
 conda update -y conda-build
 conda install -y anaconda-client
