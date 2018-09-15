@@ -9,12 +9,12 @@ language: bash
 
 os:
     - linux
-    
+
 notifications:
     email:
         on_success: always # default: change
         on_failure: always # default: always
-        
+
 services:
     - docker
 
@@ -23,4 +23,4 @@ sudo: required
 ###############################################################################
 
 script:
-    - docker run --name TRAVIS_CI_BUILD_PREDICTMD_DEPS_CONDA -v $TRAVIS_BUILD_DIR:/travisbuilddirmnt -it mhowison/conda-build:v2 /bin/bash -c "set -o verbose; set -o errexit; conda update -y conda; conda update -y conda-build; conda install -y anaconda-client; cd ~; mkdir -pv travis-build-dir-predictmd-conda-recipes; cp --recursive /travisbuilddirmnt/* travis-build-dir-predictmd-conda-recipes; cd travis-build-dir-predictmd-conda-recipes; conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive; conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive;"
+    - docker run --name TRAVIS_CI_BUILD_PREDICTMD_DEPS_CONDA -v $TRAVIS_BUILD_DIR:/travisbuilddirmnt -it mhowison/conda-build:v2 /bin/bash -c "set -o verbose; set -o errexit; conda install -fy setuptools; conda update -y conda; conda update -y conda-build; conda install -y anaconda-client; cd ~; mkdir -pv travis-build-dir-predictmd-conda-recipes; cp --recursive /travisbuilddirmnt/* travis-build-dir-predictmd-conda-recipes; cd travis-build-dir-predictmd-conda-recipes; conda build predictmd-imagemagick predictmd-pdf2svg predictmd-texlive; conda install -y --use-local predictmd-imagemagick predictmd-pdf2svg predictmd-texlive;"
