@@ -23,7 +23,7 @@ These recipes are only intended for use inside the `mhowison/conda-build:v2` Doc
     <tbody>
         <tr>
             <td>Travis CI</td>
-            <td><a href="https://travis-ci.com/bcbi/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.com/bcbi/predictmd-conda-recipes.svg?branch=master"></a></td>
+            <td><a href="https://travis-ci.org/bcbi/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.org/bcbi/predictmd-conda-recipes.svg?branch=master"></a></td>
         </tr>
     </tbody>
 </table>
