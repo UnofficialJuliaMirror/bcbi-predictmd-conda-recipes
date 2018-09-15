@@ -74,11 +74,8 @@ docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
-conda install -fy setuptools
-conda update -y conda
-conda update -y conda-build
-conda install -y anaconda-client
 cd ~
+conda install -y anaconda-client
 wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
 unzip predictmd-conda-recipes-master.zip
 rm predictmd-conda-recipes-master.zip
@@ -139,7 +136,7 @@ If you see the message "INFO: PredictMD tests passed", then the tests have passe
 
 **Step 10:** Test the `develop` (latest) version of PredictMD:
 ```bash
-export PREDICTMD_FORCE_TEST_PLOTS=true
+export PREDICTMD_TEST_GROUP=test-plots
 ~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "develop"); Pkg.test("PredictMD");'
 ```
 
