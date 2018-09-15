@@ -1,8 +1,12 @@
-# predictmd-conda-recipes
+<!-- Beginning of file -->
+
+# predictmd-conda-recipes: Conda recipes for installing the binary requirements for plotting in PredictMD
+# Main repository: [bcbi/PredictMD.jl](https://github.com/bcbi/PredictMD.jl)
+# Website: [https://www.predictmd.net](https://www.predictmd.net)
 
 <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." />
 
-This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
+This repository contains Conda recipes for building the binary dependencies that are required for enabling the plotting functionality in [PredictMD](https://www.predictmd.net). These binary dependencies are not required for using most of the functionality in PredictMD. They are only required for plotting.
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
@@ -70,10 +74,8 @@ docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 
 **Step 3:** Now you are inside the Docker container. Run the following commands inside the container:
 ```bash
-conda update -y conda
-conda update -y conda-build
-conda install -y anaconda-client
 cd ~
+conda install -y anaconda-client
 wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
 unzip predictmd-conda-recipes-master.zip
 rm predictmd-conda-recipes-master.zip
@@ -134,7 +136,7 @@ If you see the message "INFO: PredictMD tests passed", then the tests have passe
 
 **Step 10:** Test the `develop` (latest) version of PredictMD:
 ```bash
-export PREDICTMD_FORCE_TEST_PLOTS=true
+export PREDICTMD_TEST_GROUP=test-plots
 ~/julia/bin/julia -e 'Pkg.checkout("PredictMD", "develop"); Pkg.test("PredictMD");'
 ```
 
@@ -152,3 +154,4 @@ docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
 
+<!-- End of file -->

@@ -9,12 +9,14 @@ requirements:
         - pkg-config
         - poppler
         - poppler-data
+        - setuptools
     run:
         - cairo
         - git
         - pkg-config
         - poppler
         - poppler-data
+        - setuptools
 
 test:
     commands:
