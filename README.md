@@ -1,8 +1,12 @@
-# predictmd-conda-recipes
+<!-- Beginning of file -->
+
+# predictmd-conda-recipes: Conda recipes for installing the binary requirements for plotting in PredictMD
+# Main repository: [bcbi/PredictMD.jl](https://github.com/bcbi/PredictMD.jl)
+# Website: [https://www.predictmd.net](https://www.predictmd.net)
 
 <img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." />
 
-This repository contains Conda recipes for building the binary dependencies of [PredictMD](https://www.predictmd.net).
+This repository contains Conda recipes for building the binary dependencies that are required for enabling the plotting functionality in [PredictMD](https://www.predictmd.net). These binary dependencies are not required for using most of the functionality in PredictMD. They are only required for plotting.
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
@@ -152,3 +156,4 @@ docker start -a -i BUILD_PREDICTMD_DEPS_CONDA
 docker container rm BUILD_PREDICTMD_DEPS_CONDA
 ```
 
+<!-- End of file -->
