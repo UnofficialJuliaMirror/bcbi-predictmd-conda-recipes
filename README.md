@@ -27,7 +27,7 @@ These recipes are only intended for use inside the `mhowison/conda-build:v2` Doc
     <tbody>
         <tr>
             <td>Travis CI</td>
-            <td><a href="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.com/DilumAluthge/predictmd-conda-recipes.svg?branch=master"></a></td>
+            <td><a href="https://travis-ci.org/bcbi/predictmd-conda-recipes/branches"><img alt="Travis build status (master)" title="Travis build status (master)" src="https://travis-ci.org/bcbi/predictmd-conda-recipes.svg?branch=master"></a></td>
         </tr>
     </tbody>
 </table>
@@ -76,7 +76,7 @@ docker run --name BUILD_PREDICTMD_DEPS_CONDA -it mhowison/conda-build:v2
 ```bash
 cd ~
 conda install -y anaconda-client
-wget --output-document=predictmd-conda-recipes-master.zip https://github.com/DilumAluthge/predictmd-conda-recipes/archive/master.zip
+wget --output-document=predictmd-conda-recipes-master.zip https://github.com/bcbi/predictmd-conda-recipes/archive/master.zip
 unzip predictmd-conda-recipes-master.zip
 rm predictmd-conda-recipes-master.zip
 cd predictmd-conda-recipes-master
