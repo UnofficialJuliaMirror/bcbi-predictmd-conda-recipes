@@ -10,6 +10,8 @@ This repository contains Conda recipes for building the binary dependencies that
 
 These recipes are only intended for use inside the `mhowison/conda-build:v2` Docker image, and therefore they may not work in other environments.
 
+Issues related to this repository should be submitted to the main PredictMD issue tracker: [https://github.com/bcbi/PredictMD.jl/issues](https://github.com/bcbi/PredictMD.jl/issues)
+
 ### Table of Contents
 - [CI/CD](#cicd)
 - [Recipes](#recipes)
